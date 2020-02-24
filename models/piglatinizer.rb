@@ -5,7 +5,7 @@ class PigLatinizer
   def piglatinize(word)
     letters = word.split("")
     letters.keep_if {|letter| letter != "."}
-    if vowel?(letters[0])
+    vowel?(letters[0])
       letters << "way"
     else 
       if letters.size == 1
