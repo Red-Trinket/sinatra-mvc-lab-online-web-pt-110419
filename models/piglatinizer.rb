@@ -7,13 +7,15 @@ class PigLatinizer
     letters.keep_if {|letter| letter != "."}
     if vowel?(letters[0])
       letters << "way"
-    elsif letters.size == 1
-      letters  << "way"
-    elsif letters.size > 1 
-      until vowel?(letters[0]) 
-        letters << letters.shift
-      end
-      letters  << "ay"
+    else 
+      if letters.size == 1
+        letters  << "way"
+      elsif letters.size > 1 
+        until vowel?(letters[0]) 
+          letters << letters.shift
+        end
+        letters  << "ay"
+      end 
     end 
     letters.join
   end
