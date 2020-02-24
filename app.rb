@@ -9,7 +9,7 @@ class App < Sinatra::Base
   
   post '/piglatinize' do 
     @text = params[:user_phrase].to_s 
-    @piglatinizer = PigLatinizer.new
+    @piglatinizer = 
     erb:piglatin 
   end 
   
