@@ -2,22 +2,13 @@ require 'pry'
 
 class PigLatinizer
 
-  def piglatinize(word)
-    letters = word.split("")
-    letters.keep_if {|letter| letter != "."}
-    if vowel?(letters[0])
-      letters << "way"
-    else 
-      if letters.size == 1
-        letters  << "way"
-      elsif letters.size > 1 
-        until vowel?(letters[0]) 
-          letters << letters.shift
-        end
-        letters  << "ay"
-      end 
-    end 
-    letters.join
+  def piglatinize_word(word)
+    first_letter = word[0].downcase
+    if first_letter == "a" || first_letter == "e" || first_letter == "i" || first_letter == "o" || first_letter == "u"
+        # piglatinize word that starts with a vowel
+    else
+        # piglatinize word that starts with a consonant
+    end
   end
 
   def piglatinize(string)
