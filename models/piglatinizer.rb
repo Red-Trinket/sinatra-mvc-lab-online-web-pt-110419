@@ -5,7 +5,7 @@ class PigLatinizer
   def piglatinize_word(word)
     first_letter = word[0].downcase
     if first_letter == "a" || first_letter == "e" || first_letter == "i" || first_letter == "o" || first_letter == "u"
-        # piglatinize word that starts with a vowel
+        "#{word}way"
     else
         # piglatinize word that starts with a consonant
     end
